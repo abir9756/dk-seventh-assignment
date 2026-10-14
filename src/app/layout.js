@@ -1,3 +1,4 @@
+
 const dns = require("dns/promises");
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import { Noto_Serif_Bengali} from "next/font/google";
@@ -5,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/component/Navbar";
 import Marquee from "@/component/Marquee";
 import Footer from "@/component/Footer";
+import Navlinks from "@/component/Navlinks";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin"],
@@ -26,8 +28,9 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
+        <Navlinks></Navlinks>
         <Marquee></Marquee>
-        <main className="bg-[#F3FBF4]">
+        <main >
           {children}
         </main>
         <Footer></Footer>
