@@ -7,10 +7,10 @@ const Marquee = async () => {
     "https://openapi.programming-hero.com/api/bazardor/products",
   );
   const data = await res.json();
-  console.log(data);
+ 
   return (
     <div className=" border-b-2 border-base-300">
-      <div className="container mx-auto">
+      <div>
         <MarqueeText>
           {data.map((category) => (
             <div key={category.id} className=" flex gap-1.5 py-2 px-4 border-r border-base-300">

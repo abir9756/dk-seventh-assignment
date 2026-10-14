@@ -1,3 +1,5 @@
+const dns = require("dns/promises");
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import { Noto_Serif_Bengali} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/Navbar";
