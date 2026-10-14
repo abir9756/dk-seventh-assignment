@@ -46,6 +46,7 @@ export default function Basic() {
           <TbArrowBack />
           সাইন আউট
         </button>
+        
       </div>
 
       <Form className="w-full  " onSubmit={onSubmit}>
@@ -55,9 +56,9 @@ export default function Basic() {
             <div className="p-6 ">
               <h2>নাম </h2>
               <div className="join pb-4 rounded-md w-full">
-                <input type="text" className="input w-full join-item" />
+                <input name="name" type="text" className="input w-full join-item" />
               </div>
-              <button className="btn btn-block bg-[#05893E] text-white font-semibold rounded-md join-item">আপডেট</button>
+              <button type="submit" className="btn btn-block bg-[#05893E] text-white font-semibold rounded-md join-item">আপডেট</button>
             </div>
           </div>
         </fieldset>

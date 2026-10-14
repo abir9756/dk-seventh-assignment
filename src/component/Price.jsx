@@ -3,7 +3,7 @@ import React from "react";
 
 const PriceSection = async () => {
   const res = await fetch(
-    "https://openapi.programming-hero.com/api/bazardor/products",
+    "https://openapi.programming-hero.com/api/bazardor/products", { next: { revalidate: 10 } }
   );
   const data = await res.json();
   const upData = data
