@@ -9,7 +9,7 @@ import Footer from "@/component/Footer";
 import Navlinks from "@/component/Navlinks";
 
 const notoSerifBengali = Noto_Serif_Bengali({
-  subsets: ["latin"],
+  subsets: ["latin","bengali"],
 });
 
 

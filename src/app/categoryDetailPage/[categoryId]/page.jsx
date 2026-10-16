@@ -5,10 +5,10 @@ import React from "react";
 const CategoryDetailPage = async ({ params }) => {
   const { categoryId } = await params;
   const res = await fetch(
-    `https://openapi.programming-hero.com/api/bazardor/products?category=${categoryId}`,
+    `https://openapi.programming-hero.com/api/bazardor/products?category=${categoryId}`,{next:{revalidate:10}},
   );
   const data = await res.json();
-  console.log(data);
+  
   return (
     <div className="container mx-auto">
       <div className="py-6 px-4">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
@@ -13,15 +14,16 @@ const Marquee = async () => {
       <div>
         <MarqueeText>
           {data.map((category) => (
-            <div key={category.id} className=" flex gap-1.5 py-2 px-4 border-r border-base-300">
+           <Link href={`/productDetailPage/${category.id}`} key={category.id}>
+            <div className=" flex gap-1.5 py-2 px-4 border-r border-base-300">
               <span className=" flex gap-1.5">
                 <span>{category.image}</span>
                 {category.nameBn}
-                <span>{category.today.toLocaleString("bn-BD")}</span>টাকা/{category.unit}{" "}
+                <span>{(category.today.toLocaleString("bn-BD"))}</span>টাকা/{category.unit}{" "}
                 {category.change.dir === "up" ? (
-                  <span className="text-success">▲{category.change.pct.toLocaleString("bn-BD")}</span>
+                  <span className="text-success">▲{Math.abs(category.change.pct).toLocaleString("bn-BD")}</span>
                 ) : (
-                  <span className="text-error">▼{category.change.pct.toLocaleString("bn-BD")}</span>
+                  <span className="text-error">▼{Math.abs(category.change.pct).toLocaleString("bn-BD")}</span>
                 )}
                 %
               </span>
@@ -29,6 +31,7 @@ const Marquee = async () => {
               <p></p>
               <span></span>
             </div>
+           </Link>
           ))}
         </MarqueeText>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PriceSection = async () => {
@@ -24,8 +25,10 @@ const PriceSection = async () => {
           <h3 className="font-bold"> আজ দাম বেড়েছে</h3>
         </div>
         <div className="grid grid-cols-3 gap-5 mb-10">
+        
           {upData.map((Data) => (
-            <div key={Data.id}>
+            <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
+            <div >
               <div className="card  bg-base-100 card-xs shadow-sm">
                 <div className="card-body">
                   <div className="flex">
@@ -56,6 +59,7 @@ const PriceSection = async () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -65,8 +69,10 @@ const PriceSection = async () => {
           <h3 className="font-bold"> আজ দাম কমেছে</h3>
         </div>
         <div className="grid grid-cols-3 gap-5 mb-10">
+          
           {downData.map((Data) => (
-            <div key={Data.id}>
+            <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
+            <div >
               <div className="card  bg-base-100 card-xs shadow-sm">
                 <div className="card-body">
                   <div className="flex">
@@ -97,6 +103,7 @@ const PriceSection = async () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -106,8 +113,10 @@ const PriceSection = async () => {
           <p>মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে</p>
         </div>
         <div className="grid grid-cols-3 gap-5 mb-10">
+     
           {data.map((Data) => (
-            <div key={Data.id}>
+             <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
+            <div >
               <div className="card  bg-base-100 card-xs shadow-sm">
                 <div className="card-body">
                   <div className="flex">
@@ -141,6 +150,7 @@ const PriceSection = async () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
