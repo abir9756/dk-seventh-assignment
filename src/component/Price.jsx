@@ -90,8 +90,8 @@ const PriceSection = async () => {
                         <p>টাকা</p>
                       </div>
                     </div>
-                    <div className="badge text-error badge-ghost">
-                      ▲{Data.change.pct.toLocaleString("bn-BD")}%
+                    <div className="badge text-[#1A9951] badge-ghost">
+                      ▼{Data.change.pct.toLocaleString("bn-BD")}%
                     </div>
                   </div>
                 </div>
@@ -131,9 +131,12 @@ const PriceSection = async () => {
                         <p>টাকা</p>
                       </div>
                     </div>
-                    <div className="badge text-error badge-ghost">
-                      ▲{Data.change.pct.toLocaleString("bn-BD")}%
+                   
+
+                    <div >
+                      {Data.change.dir==="up"? (<div className="badge text-error badge-ghost">▲{Data.change.pct.toLocaleString("bn-BD")}%</div>) : (<div className="badge text-[#1A9951] badge-ghost">▼{Data.change.pct.toLocaleString("bn-BD")}%</div>)}
                     </div>
+
                   </div>
                 </div>
               </div>

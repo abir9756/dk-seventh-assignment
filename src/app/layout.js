@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <Navbar></Navbar>
         <Navlinks></Navlinks>
         <Marquee></Marquee>
-        <main >
+        <main className="bg-[#F3FBF4]">
           {children}
         </main>
         <Footer></Footer>

@@ -16,7 +16,7 @@ const Navlinks = async () => {
           <Link
             className="px-3 py-1"
             key={category.id}
-            href={`/categories/${category.slug}`}
+            href={`/categoryDetailPage/${category.slug}`}
           >
             <span className="pr-2"> {category.icon}</span>
             <span>{category.nameBn}</span>

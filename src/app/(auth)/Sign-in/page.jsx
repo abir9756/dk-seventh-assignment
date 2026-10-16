@@ -110,7 +110,7 @@ export default function SignInPage() {
         <div className="text-center">
           <p>
             অ্যাকাউন্ট নেই?{" "}
-            <Link href={"/Sign-up"} className="text-[#05893E]">
+            <Link href={"/sign-up"} className="text-[#05893E]">
               সাইন আপ করুন
             </Link>
           </p>

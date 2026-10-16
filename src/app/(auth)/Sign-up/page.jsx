@@ -156,7 +156,7 @@ export default function SignUpPage() {
         <div className="text-center">
           <p>
             অ্যাকাউন্ট আছে?{" "}
-            <Link href={"/Sign-in"} className="text-[#05893E]">
+            <Link href={"/sign-in"} className="text-[#05893E]">
               সাইন ইন করুন
             </Link>
           </p>
