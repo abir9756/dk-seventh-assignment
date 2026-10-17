@@ -4,7 +4,8 @@ import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
 const client = new MongoClient(process.env.BETTER_AUTH_DB_URL);
 const db = client.db("bazar");
-
+console.log(process.env.BETTER_AUTH_GITHUB_CLIENT_ID,"git")
+console.log(process.env.BETTER_AUTH__GITHUB_SECRET)
 export const auth = betterAuth({
     emailAndPassword: { 
     enabled: true, 

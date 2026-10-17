@@ -51,7 +51,7 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="container mx-auto  flex justify-center py-10 flex-col items-center">
+    <div className="container mx-auto md:text-start text-center flex justify-center py-10 flex-col items-center">
       <h1 className="text-3xl font-bold">অ্যাকাউন্ট তৈরি করুন</h1>
       <h3>বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।</h3>
       <Form
@@ -137,10 +137,10 @@ export default function SignUpPage() {
         </Button>
 
         <div className="divider">অথবা</div>
-        <div className="flex gap-2">
+        <div className="md:flex  gap-2">
           <Button
             onClick={handleGoogleSignUp}
-            className="w-full rounded-xl"
+            className="w-full rounded-xl mb-2 md:mb-0"
             variant="tertiary"
           >
             <FcGoogle />

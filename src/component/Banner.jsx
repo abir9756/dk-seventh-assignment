@@ -8,9 +8,9 @@ const Banner = () => {
   // });
   return (
     <div className="container mx-auto">
-      <div className="my-10 px-4 rounded-3xl border border-base-300 flex justify-between bg-white items-center">
+      <div className="my-10 px-4 rounded-3xl border border-base-300 text-center md:text-start flex flex-col  md:flex justify-center md:flex-row md:justify-between bg-white items-center">
         <div>
-          {/* <p className="text-[#05893E] inline rounded-4xl py-3 px-1  bg-green-100">{date}</p> */}
+          
           <p  className="text-[#05893E] inline rounded-4xl py-3 px-1  bg-green-100" suppressHydrationWarning>
             {new Date().toLocaleDateString("bn-BD", { dateStyle: "full" })}
           </p>

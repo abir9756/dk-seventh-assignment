@@ -18,7 +18,7 @@ const SortBy = ({ data }) => {
   const sortedData = sortCategory(data);
   return (
     <div>
-      <div className="p-4 card mb-4  bg-base-100  shadow-sm flex-row items-center justify-end">
+      <div className="p-4 card mb-4  bg-base-100  shadow-sm flex-row items-center md:justify-end justify-center">
         <Description className="">সাজান</Description>
         <select
           value={sortBy}
@@ -30,11 +30,11 @@ const SortBy = ({ data }) => {
           <option value={"বেশি থেকে কম"}>বেশি থেকে কম</option>
         </select>
       </div>
-      <Description>
+      <Description className="flex justify-center md:justify-start">
         মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে
       </Description>
 
-      <div className="grid grid-cols-3 gap-5 mb-10  mt-4">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mb-10  mt-4">
         {sortedData.map((Data) => (
           <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
             <div>

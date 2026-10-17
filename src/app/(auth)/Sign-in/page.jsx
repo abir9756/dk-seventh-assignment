@@ -45,9 +45,9 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="container mx-auto  flex justify-center py-10 flex-col items-center">
+    <div className="container mx-auto md:text-start text-center flex justify-center py-10 flex-col items-center">
       <h1 className="text-3xl font-bold">সাইন ইন</h1>
-      <h3>বিস্তারিত দাম, বাজার তুলনা ও প্রোফাইল দেখতে অ্যাকাউন্টে ঢুকুন।</h3>
+      <h3 >বিস্তারিত দাম, বাজার তুলনা ও প্রোফাইল দেখতে অ্যাকাউন্টে ঢুকুন।</h3>
       <Form
         className="flex w-96 my-10 bg-white card border border-base-100 rounded-2xl flex-col gap-4"
         onSubmit={onSubmit}
@@ -96,10 +96,10 @@ export default function SignInPage() {
         </Button>
 
         <div className="divider ">অথবা</div>
-        <div className="flex gap-2">
+        <div className="md:flex gap-2">
           <Button
             onClick={handleGoogleSignUp}
-            className="w-full rounded-xl"
+            className="w-full rounded-xl mb-2 md:mb-0"
             variant="tertiary"
           >
             <FcGoogle />

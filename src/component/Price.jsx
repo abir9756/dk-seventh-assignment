@@ -19,12 +19,12 @@ const PriceSection = async () => {
 
   return (
     <div className="container mx-auto">
-      <div>
-        <div className="flex mb-5">
+      <div >
+        <div className=" flex justify-center md:justify-start mb-5">
           <p className="text-error pr-1">▲</p>
           <h3 className="font-bold"> আজ দাম বেড়েছে</h3>
         </div>
-        <div className="grid grid-cols-3 gap-5 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
         
           {upData.map((Data) => (
             <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
@@ -64,11 +64,11 @@ const PriceSection = async () => {
         </div>
       </div>
       <div>
-        <div className="flex mb-5">
+        <div className="flex justify-center md:justify-start mb-5">
           <p className="text-success pr-1">▼</p>
           <h3 className="font-bold"> আজ দাম কমেছে</h3>
         </div>
-        <div className="grid grid-cols-3 gap-5 mb-10">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mb-10">
           
           {downData.map((Data) => (
             <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
@@ -108,11 +108,11 @@ const PriceSection = async () => {
         </div>
       </div>
       <div>
-        <div className=" mb-5">
+        <div className="text-center md:text-start mb-5">
           <h3 className="font-bold">সব পণ্য</h3>
           <p>মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে</p>
         </div>
-        <div className="grid grid-cols-3 gap-5 mb-10">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mb-10">
      
           {data.map((Data) => (
              <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>

@@ -28,13 +28,13 @@ export default function Basic() {
   };
 
   return (
-    <div className="container mx-auto my-30 w-[768px] h-[519px] px-4">
-      <div>
+    <div className="container mx-auto  md:my-30 md:w-[768px] md:h-[519px] px-4">
+      <div className="text-center">
         <h2 className="font-bold">আমার প্রোফাইল</h2>
         <Description>আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</Description>
       </div>
 
-      <div className="flex items-center justify-between border border-base-300 rounded-xl p-6 my-6 bg-white">
+      <div className="flex flex-col md:flex md:flex-row items-center justify-center md:justify-between border border-base-300 rounded-xl p-6 my-6 bg-white">
         <div className="py-6">
           <h2 className="font-semibold">{session?.user?.name}</h2>
           <p>{session?.user?.email}</p>

@@ -10,7 +10,7 @@ const Navlinks = async () => {
 
   return (
     <div className="border-b-2 border-base-300">
-      <div className="container mx-auto flex py-4">
+      <div className="container mx-auto grid grid-cols-4 md:flex py-4">
         {data.map((category) => (
           <ActiveCategory
             key={category.id}

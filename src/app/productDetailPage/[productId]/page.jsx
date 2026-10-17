@@ -13,8 +13,8 @@ const ProductDetailPage = async ({ params }) => {
   return (
     <div className="container mx-auto ">
       <div className="my-6 mx-4">
-        <div className="my-6 rounded-2xl flex-row justify-between items-center card bg-base-100 card-xs shadow-sm">
-          <div className="flex">
+        <div className="my-6 rounded-2xl text-center md:text-start  md:flex-row  md:justify-between items-center card bg-base-100 card-xs shadow-sm">
+          <div className="md:flex ">
             <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-base-200 text-3xl">
               {data.image}
             </div>
@@ -49,11 +49,11 @@ const ProductDetailPage = async ({ params }) => {
             <span>
               {data.change.dir === "up" ? (
                 <span className="text-success">
-                  ▲{data.change.pct.toLocaleString("bn-BD")}
+                  ▲{Math.abs(data.change.pct).toLocaleString("bn-BD")}
                 </span>
               ) :data.change.dir==="flat"? (<div className="badge text-black badge-ghost">-০.০%</div>): (
                 <span className="text-error">
-                  ▼{data.change.pct.toLocaleString("bn-BD")}
+                  ▼{Math.abs(data.change.pct).toLocaleString("bn-BD")}
                 </span>
               )}
               %
@@ -61,9 +61,9 @@ const ProductDetailPage = async ({ params }) => {
           </div>
         </div>
 
-        <div className=" rounded-2xl   card bg-base-100 card-xs shadow-sm">
+        <div className=" rounded-2xl  text-center md:text-start card bg-base-100 card-xs shadow-sm">
           <h2 className="text-xl font-semibold">দামের সারসংক্ষেপ</h2>
-          <div className="grid mb-6 grid-cols-3 gap-4">
+          <div className="grid mb-6 md:grid-cols-3 grid-cols-1 gap-4">
             <div className=" px-6 py-4 card rounded-2xl border border-base-300  bg-base-100">
               <h5>সর্বনিম্ন দাম</h5>
               <h2 className="font-bold  text-[#05893E]">

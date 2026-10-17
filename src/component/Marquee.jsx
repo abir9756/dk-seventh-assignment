@@ -12,7 +12,7 @@ const Marquee = async () => {
   return (
     <div className=" border-b-2 border-base-300">
       <div>
-        <MarqueeText direction="right" duration={15}>
+        <MarqueeText direction="right" duration={13}>
           {data.map((category) => (
            <Link href={`/productDetailPage/${category.id}`} key={category.id}>
             <div className=" flex gap-1.5 py-2 px-4 border-r border-base-300">

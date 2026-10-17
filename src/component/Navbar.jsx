@@ -15,6 +15,7 @@ import {
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { ChevronDown } from "@gravity-ui/icons";
 import { TbArrowBack } from "react-icons/tb";
+import { GiShoppingCart } from "react-icons/gi";
 
 const Navbar = () => {
   const { data: session, isPending } = useSession();
@@ -104,19 +105,16 @@ const Navbar = () => {
   return (
     <header>
       <div className=" border-b border-base-300">
-        <div className="container mx-auto flex justify-between items-center py-3 px-4">
+        <div className="container mx-auto md:flex md:text-start text-center  justify-between items-center py-3 px-4">
          <Link href={'/'}>
-          <div className="flex gap-2">
-            <Image
-              className="bg-green-600 rounded-2xl"
-              src={"/logo-icon.png"}
-              alt="logo"
-              height={50}
-              width={50}
-            />
+          <div className="flex flex-col justify-center items-center md:flex md:flex-row  text-center mb-5 md:m-0 md:text-start  gap-2">
+           
+            <div className="bg-[#05893E] rounded-2xl h-15 w-15 flex justify-center items-center">
+              <GiShoppingCart className="text-3xl"/>
+            </div>
             <div>
               <h1 className="font-bold text-2xl">বাজার দর</h1>
-              {/* <p>{date}</p> */}
+              
               <p suppressHydrationWarning>
                 {new Date().toLocaleDateString("bn-BD", { dateStyle: "full" })}
               </p>

@@ -12,11 +12,11 @@ const CategoryDetailPage = async ({ params }) => {
   return (
     <div className="container mx-auto">
       <div className="py-6 px-4">
-        <div className="p-5 mb-6 flex-row items-center gap-1 card   bg-base-100 card-xs shadow-sm">
+        <div className="p-5 mb-6 text-center md:text-start md:flex-row items-center gap-1 card   bg-base-100 card-xs shadow-sm">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl  text-3xl">
             {data[0].image}
           </div>
-          <div>
+          <div >
             <h2 className="font-bold text-2xl">{data[0].categoryNameBn}</h2>
             <Description>
               {data.length.toLocaleString("bn-BD")}টি পণ্যের আজকের দাম ও
