@@ -12,7 +12,7 @@ const Marquee = async () => {
   return (
     <div className=" border-b-2 border-base-300">
       <div>
-        <MarqueeText>
+        <MarqueeText direction="right" duration={15}>
           {data.map((category) => (
            <Link href={`/productDetailPage/${category.id}`} key={category.id}>
             <div className=" flex gap-1.5 py-2 px-4 border-r border-base-300">
@@ -22,7 +22,7 @@ const Marquee = async () => {
                 <span>{(category.today.toLocaleString("bn-BD"))}</span>টাকা/{category.unit}{" "}
                 {category.change.dir === "up" ? (
                   <span className="text-success">▲{Math.abs(category.change.pct).toLocaleString("bn-BD")}</span>
-                ) : (
+                ) :category.change.dir==="flat"? (<div className="badge text-black badge-ghost">-০.০%</div>): (
                   <span className="text-error">▼{Math.abs(category.change.pct).toLocaleString("bn-BD")}</span>
                 )}
                 %

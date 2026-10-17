@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import React from "react";
+import ActiveCategory from "./ActiveCategory";
 
 const Navlinks = async () => {
   const res = await fetch(
@@ -11,16 +10,12 @@ const Navlinks = async () => {
 
   return (
     <div className="border-b-2 border-base-300">
-      <div className="container mx-auto py-4">
+      <div className="container mx-auto flex py-4">
         {data.map((category) => (
-          <Link
-            className="px-3 py-1"
+          <ActiveCategory
             key={category.id}
-            href={`/categoryDetailPage/${category.slug}`}
-          >
-            <span className="pr-2"> {category.icon}</span>
-            <span>{category.nameBn}</span>
-          </Link>
+            category={category}
+          ></ActiveCategory>
         ))}
       </div>
     </div>

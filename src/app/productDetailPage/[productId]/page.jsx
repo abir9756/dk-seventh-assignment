@@ -51,7 +51,7 @@ const ProductDetailPage = async ({ params }) => {
                 <span className="text-success">
                   ▲{data.change.pct.toLocaleString("bn-BD")}
                 </span>
-              ) : (
+              ) :data.change.dir==="flat"? (<div className="badge text-black badge-ghost">-০.০%</div>): (
                 <span className="text-error">
                   ▼{data.change.pct.toLocaleString("bn-BD")}
                 </span>
