@@ -15,12 +15,17 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
+    if (data.password !== data.confirmPassword) {
+      toast.error("দুইটি পাসওয়ার্ড একই নয়!");
+      return;
+    }
     const { data: resData, error } = await signUp.email({
       name: data.name,
       email: data.email,
@@ -28,12 +33,10 @@ export default function SignUpPage() {
       callbackURL: "/",
     });
     if (resData) {
-      console.log(data);
-      // must import from next nevigation
+      toast.success("সফল ভাবে সাইন আপ হয়েছে ।");
       redirect("/");
-    }
-    if (error) {
-      console.log(error);
+    } else {
+      toast.error("সাইন আপ ব্যর্থ হয়েছে!");
     }
   };
   const handleGoogleSignUp = async () => {
@@ -110,7 +113,7 @@ export default function SignUpPage() {
         <TextField
           isRequired
           minLength={8}
-          name="password"
+          name="confirmPassword"
           type="password"
           validate={(value) => {
             if (value.length < 8) {

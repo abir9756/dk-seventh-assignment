@@ -14,6 +14,7 @@ import { assertRootParamInSamples } from "next/dist/server/app-render/instant-va
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -25,6 +26,12 @@ export default function SignInPage() {
       password: data.password,
       callbackURL: "/",
     });
+    if (resData) {
+      toast.success("সফল ভাবে সাইন ইন হয়েছে ।");
+    }else{
+      toast.error("সাইন ইন ব্যর্থ হয়েছে!")
+    }
+    
   };
   const handleGoogleSignUp = async () => {
     const socialGoogleData = await signIn.social({

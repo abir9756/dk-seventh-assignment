@@ -37,47 +37,54 @@ const SortBy = ({ data }) => {
       <div className="grid grid-cols-3 gap-5 mb-10  mt-4">
         {sortedData.map((Data) => (
           <Link href={`/productDetailPage/${Data.id}`} key={Data.id}>
-          <div >
-            <div className="card  bg-base-100 card-xs shadow-sm">
-              <div className="card-body">
-                <div className="flex">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-base-200 text-3xl">
-                      {Data.image}
-                    </div>
+            <div>
+              <div className="card  bg-base-100 card-xs shadow-sm">
+                <div className="card-body">
+                  <div className="flex">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-base-200 text-3xl">
+                        {Data.image}
+                      </div>
 
+                      <div>
+                        <h2 className="card-title">{Data.nameBn}</h2>
+                        <p>
+                          {" "}
+                          প্রতি {Data.unit} · {Data.categoryNameBn}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between">
                     <div>
-                      <h2 className="card-title">{Data.nameBn}</h2>
-                      <p>প্রতি কেজি</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex justify-between">
-                  <div>
-                    <p>আজকের দাম</p>
-                    <div className="flex items-center gap-1">
-                      <h3 className="font-bold text-xl">
-                        {Data.today.toLocaleString("bn-BD")}{" "}
-                      </h3>
-                      <p>টাকা</p>
-                    </div>
-                  </div>
-                  <div>
-                    {Data.change.dir === "up" ? (
-                      <div className="badge text-error badge-ghost">
-                        ▲{Math.abs(Data.change.pct).toLocaleString("bn-BD")}%
+                      <p>আজকের দাম</p>
+                      <div className="flex items-center gap-1">
+                        <h3 className="font-bold text-xl">
+                          {Data.today.toLocaleString("bn-BD")}{" "}
+                        </h3>
+                        <p>টাকা</p>
                       </div>
-                    ) :Data.change.dir==="flat"? (<div className="badge text-black badge-ghost">-০.০%</div>): (
-                      <div className="badge text-[#1A9951] badge-ghost">
-                        ▼{Math.abs(Data.change.pct).toLocaleString("bn-BD")}%
-                      </div>
-                    )}
+                    </div>
+                    <div>
+                      {Data.change.dir === "up" ? (
+                        <div className="badge text-error badge-ghost">
+                          ▲{Math.abs(Data.change.pct).toLocaleString("bn-BD")}%
+                        </div>
+                      ) : Data.change.dir === "flat" ? (
+                        <div className="badge text-black badge-ghost">
+                          -০.০%
+                        </div>
+                      ) : (
+                        <div className="badge text-[#1A9951] badge-ghost">
+                          ▼{Math.abs(Data.change.pct).toLocaleString("bn-BD")}%
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </Link>
         ))}
       </div>

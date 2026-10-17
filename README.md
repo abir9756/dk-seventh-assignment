@@ -34,3 +34,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## 🛒 Bazardor — বাজারদর
+ --A Bengali-language market price platform built with Next.js. Browse product categories, explore market prices, track price changes, and create an account to access additional features.
+
+
+### 🧰 Tech Stack
+## Technology
+- Next.js - React framework and routing
+- React - Component-based UI
+- JavaScript - Application logic
+- Tailwind CSS - Styling
+- DaisyUI - UI styling and theme utilities
+- HeroUI - Form controls and UI components
+- Better Auth - Authentication and sessions
+- React Toastify - Toast notifications
+- React Icons - Icons 
+
+
+### ✨ Features
+- Bengali Interface: Bengali text, localized dates, and Bengali number formatting.
+- Price Change Indicators: Display products whose prices have increased or decreased, with percentage changes.
+- Authentication: Sign up and sign in using email and password.
+- Social Authentication: Google and GitHub sign-in integration.
+- Protected Routes: Restrict access to profile and product detail pages to authenticated users.
+- Toast Notifications: Display feedback for successful actions and errors.

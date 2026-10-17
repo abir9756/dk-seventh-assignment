@@ -127,7 +127,7 @@ const PriceSection = async () => {
 
                       <div>
                         <h2 className="card-title">{Data.nameBn}</h2>
-                        <p>প্রতি কেজি</p>
+                        <p>প্রতি {Data.unit}</p>
                       </div>
                     </div>
                   </div>

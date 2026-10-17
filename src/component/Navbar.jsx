@@ -28,9 +28,7 @@ const Navbar = () => {
       </div>
     );
   }
-  // const date = new Date().toLocaleDateString("bn-BD", {
-  //   dateStyle: "full",
-  // });
+ 
 
   const authLink = (
     <div>
@@ -107,6 +105,7 @@ const Navbar = () => {
     <header>
       <div className=" border-b border-base-300">
         <div className="container mx-auto flex justify-between items-center py-3 px-4">
+         <Link href={'/'}>
           <div className="flex gap-2">
             <Image
               className="bg-green-600 rounded-2xl"
@@ -122,7 +121,7 @@ const Navbar = () => {
                 {new Date().toLocaleDateString("bn-BD", { dateStyle: "full" })}
               </p>
             </div>
-          </div>
+          </div></Link>
           <div>{authLink}</div>
           {menuOpen && (
             <ul className="menu bg-base-200 rounded-box  w-56">
